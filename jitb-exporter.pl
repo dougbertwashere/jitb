@@ -12,7 +12,7 @@ use Plack::Builder;
 use Storable qw(lock_store lock_retrieve);
 
 my $prom_port = 9127;
-my $store = "./data/jitb.dat";
+my $store = "/t/jitb.dat";
 my $debug = 1;
 
 #

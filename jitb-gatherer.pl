@@ -5,7 +5,7 @@ use IO::Socket;
 use Storable qw(lock_store lock_retrieve);
 
 my $udp_spray_port = 6750;
-my $store = "./data/jitb.dat";
+my $store = "/t/jitb.dat";
 my $debug = 0;
 
 #
