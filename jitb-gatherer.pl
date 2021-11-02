@@ -31,7 +31,7 @@ while ($sock->recv($msg, 512)) {
 
 	#printf(" MSG_ID %-4x D1 %10d D2 %10d DATA %s \"%s\"\n", $msg_id, $d1, $d2, join(",", @dat), $msg) if $debug;
 
-	printf(" MSG_ID %-4x D1 %10d D2 %10d\n", $msg_id, $d1, $d2) if debug;
+	printf(" MSG_ID %-4x D1 %10d D2 %10d\n", $msg_id, $d1, $d2) if $debug;
 
 	grok_msg($msg_id, $d1, $d2, @dat);
 }
