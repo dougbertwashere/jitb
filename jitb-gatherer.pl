@@ -29,9 +29,9 @@ while ($sock->recv($msg, 512)) {
 	my ($d1, $d2, $msg_id, $fam_id, $ts, $rtr, $prio, $ext, $len) =	unpack("L5C4", $msg);
 	my @dat = unpack("C8", $msg);
 
-	printf(" MSG_ID %-4x D1 %10d D2 %10d DATA %s \"%s\"\n", $msg_id, $d1, $d2, join(",", @dat), $msg) if $debug;
+	#printf(" MSG_ID %-4x D1 %10d D2 %10d DATA %s \"%s\"\n", $msg_id, $d1, $d2, join(",", @dat), $msg) if $debug;
 
-	printf(" MSG_ID %-4x D1 %10d D2 %10d\n", $msg_id, $d1, $d2);
+	printf(" MSG_ID %-4x D1 %10d D2 %10d\n", $msg_id, $d1, $d2) if debug;
 
 	grok_msg($msg_id, $d1, $d2, @dat);
 }
